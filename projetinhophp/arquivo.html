@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        h1{
+            color: rgb(7, 2, 12);
+            text-align: center;
+
+        }
+        body{
+            background-color: rgb(228, 210, 187);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Formulário de Contato</h1>
+    <form method="GET" action="arquivo.php">
+        <fieldset id="usuario">
+            <legend> Informações do Usuário</legend>
+            <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" placeholder="Nome Completo"/></p>
+            <p><label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" size="8" placeholder="Senha"/></p>
+            <p><label for="cNasc">Data de Nascimento:</label><input type="date" name="tNasc" id="cNasc"/></p>
+            <fieldset id="cSexo"><legend><label id="cSexo">Sexo:</label></legend>
+            <input type="radio" name="tSexo" id="cMasc" checked/><label for="cMasc">Masculino</label><br>
+            <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label><br>
+            </fieldset>
+        </fieldset>
+        <fieldset id="endereco">
+            <legend>Endereço</legend>
+            <p><label for="cRua">Logradouro</label></p>
+            <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav..."/>
+            <p><label for="cNum">Número</label></p>
+            <input type="number" name="tNum" id="cNum" min="0" max="9999" placeholder="Número"/>
+            <p><label for="cEstado">Estado</label></p>
+            <select name="tEstado" id="cEstado">
+                <optgroup>Região Sudeste</optgroup>
+                     <option value="SP" selected>São Paulo</option>
+                     <option value="MG">Minas Gerais</option>
+                     <option value="RJ">Rio de Janeiro</option>
+                <optgroup>Região Sul</optgroup>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+            </select>
+            <p><label for="cCid">Cidade</label><input type="text" name="tCid" id="cCid" list="cidades"/></p>
+            <datalist id="cidades"> 
+                <option value="São Paulo"></option>
+                <option value="Guarulhos"></option>
+                <option value="Sorocaba"></option>
+            </datalist>
+        </fieldset>
+        <fieldset id="mensagem">
+            <legend>Mensagem</legend>
+            <p><label for="cUrg">Grau de Urgência</label></p>
+            <input type="range" name="tUrg" id="cUrg" max="10" min="1" step="2"/>
+            <p><label for="cMsg"></label>Mensagem
+            <textarea name="tMsg" id="cMsg"  rows="5" cols="45" placeholder="Deixe aqui sua mensagem"></textarea></p>
+            <p><label for="enviar"></label><input type="submit" value="Enviar"/></p>
+
+        </fieldset>
+        </fieldset>
+    </form>
+</body>
+</html>

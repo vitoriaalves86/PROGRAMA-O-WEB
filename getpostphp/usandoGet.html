@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usando GET</title>
+
+    <style>
+            body{
+                background-color:black;
+                color:white;   }
+            
+            </style>
+</head>
+<body>
+    <h3>Cadastro</h3>
+    <form method = "get"action = "usandoget.php">
+        <!-- Campo do nome-->
+        Nome:<input type="text" name="nome">
+        <!---<input type="submit" value="Enviar">-->
+
+        <!-- Campo do Estado civil -->
+        <select name="estadocivil">
+            <option>Selecione o estaco civil</option>
+            <option name="casado">Casado</option>
+            <option name="solteiro">Solteiro</option>
+            <option name="Divorciado">Divorciado</option>
+            <option name ="Desquitado">Desquitado</option>
+            
+        </select>
+        <br><br>
+        <!-- Campo do Sexo -->
+
+        <input type="radio" name="sexo" id="masc" value="Masculino">
+        <label for="masc">Masculino</label>
+        <input type="radio" name="sexo" id="fem" value="Feminino">
+        <label for="fem">Feminino</label>
+        <br><br>
+
+        <!-- Campo do Hobby -->
+        <input type = "checkbox" name="hobby[]" value="ler">
+        <label>Ler</label>
+        <input type = "checkbox" name="hobby[]" value="escrever">
+        <label>Escrever</label>
+        <input type = "checkbox" name="hobby[]" value="teatro">
+        <label>Teatro</label>
+        <input type = "checkbox" name="hobby[]" value="cinema">
+        <label>Cinema</label>
+        <input type = "checkbox" name="hobby[]" value="viajar">
+        <label>Viajar</label>
+        <br><br>
+
+
+        <input type = "submit" value="Enviar">
+
+    </form>
+</body>
+</html>
